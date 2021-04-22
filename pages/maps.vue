@@ -35,6 +35,6 @@ export default {
 </script>
 <style scoped>
     #map {
-        height: 600px;
+        height: 400px;
     }
 </style>

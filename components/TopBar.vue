@@ -14,6 +14,9 @@
         <v-btn to="/about" text>
           <span>About</span>
         </v-btn>
+        <v-btn to="/maps" text>
+          <span>Maps</span>
+        </v-btn>
       </v-toolbar-items>
     </v-app-bar>
 </template>
