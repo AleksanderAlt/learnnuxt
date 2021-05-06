@@ -15,8 +15,47 @@
           <span>About</span>
         </v-btn>
         <v-btn to="/maps" text>
-          <span>Maps</span>
+          <span>Corona API</span>
         </v-btn>
       </v-toolbar-items>
+      <v-text-field
+        v-model="search"
+        label="Search"
+        class="mt-4"
+        ></v-text-field>
+        <v-select
+          :items="$store.getters.sortStatisticsKeys"
+          item-text="label"
+          label="Standard"
+          class="mt-4"
+        ></v-select>
     </v-app-bar>
 </template>
+
+<script>
+export default {
+  name: "TopBar",
+  computed: {
+    search: {
+      get() {
+        return this.$store.state.search;
+      },
+      set(value) {
+        this.$store.commit('SET_SEARCH', value);
+      }
+    },
+    sort: {
+      get(){
+        return this.$store.state.sort;
+      },
+      set(value){
+        this.$store.commit('SET_SORT', value);
+      }
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
